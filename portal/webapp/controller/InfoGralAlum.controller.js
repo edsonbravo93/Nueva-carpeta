@@ -1,7 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel"
-],
+        "sap/ui/core/mvc/Controller",
+        "sap/ui/model/json/JSONModel"
+    ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
@@ -20,15 +20,15 @@ sap.ui.define([
                         "FeNacimiendto": "01/03/1993"
                     }],
                     "Carrera": [{
-                        "Carrera" : "Ing. en Sistemas Computacionales"
-                        }],
-                    "Semestre" : [{
-                        "SemestreInicio" : "004/2019",
-                        "posicionCarrera" : "254 de 628",
-                        "rankingCarrera" : "537.39",
-                        "PromedioPonderado" : "5.7",
-                        "Estado" : "Regular"
-                    }]    
+                        "Carrera": "Ing. en Sistemas Computacionales"
+                    }],
+                    "Semestre": [{
+                        "SemestreInicio": "004/2019",
+                        "posicionCarrera": "254 de 628",
+                        "rankingCarrera": "537.39",
+                        "PromedioPonderado": "5.7",
+                        "Estado": "Regular"
+                    }]
                 };
 
                 // Creamos la instancia JSON model
@@ -39,7 +39,8 @@ sap.ui.define([
                 sap.ui.getCore().setModel(oModelNew);
 
                 this.getView().setModel(oModelNew);
-                
+
+                this.getView().setModel(new JSONModel([{},{}]), "lista");
 
             }
         });

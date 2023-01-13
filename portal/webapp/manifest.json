@@ -99,16 +99,16 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "InfoGralAlum",
-          "viewName": "InfoGralAlum"
+          "viewId": "View1",
+          "viewName": "View1"
         }
       }
     },
     "rootView": {
-      "viewName": "com.udep29.InfoAlum.portal.view.InfoGralAlum",
+      "viewName": "com.udep29.InfoAlum.portal.view.View1",
       "type": "XML",
       "async": true,
-      "id": "InfoGralAlum"
+      "id": "View1"
     }
   }
 }
