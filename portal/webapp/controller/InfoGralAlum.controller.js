@@ -12,15 +12,17 @@ sap.ui.define([
             onInit: function () {
 
                 var Data = {
-                    "Estudiantes": [{
+                    "Estudiantes": {
                         "NumeroIdent": "136408-0",
                         "Nombres": "Edson",
                         "Apellidos": "Bravo Zapata",
                         "nacionalidad": "Mexicana",
                         "FeNacimiendto": "01/03/1993"
-                    }],
+                    },
                     "Carrera": [{
                         "Carrera": "Ing. en Sistemas Computacionales"
+                    },{
+                        "Carrera": "Ing. en Sistemas Computacionales XXX"
                     }],
                     "Semestre": [{
                         "SemestreInicio": "004/2019",

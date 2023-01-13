@@ -8,28 +8,28 @@
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
                 <expandedHeading>
-                    <m:Title text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true" />
+                    <m:Title text="{i18n>View1View.ObjectPageHeaderWithLinksRatingIndicatorAndObjectStatus}" wrapping="true" />
                 </expandedHeading>
 
                 <snappedHeading>
                     <m:HBox>
                         <m:VBox>
-                            <m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiSmallMarginEnd" />
+                            <m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiSmallMarginEnd" fallbackIcon="sap-icon://person-placeholder"/>
                         </m:VBox>
 
                         <m:VBox>
-                            <m:Title text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true"/>
-                            <m:Label text="Example of an ObjectPage with header facet"/>
+                            <m:Title text="{i18n>View1View.ObjectPageHeaderWithLinksRatingIndicatorAndObjectStatus}" wrapping="true"/>
+                            <m:Label text="{i18n>View1View.ExampleOfAnObjectPageWithHeaderFacet}"/>
                         </m:VBox>
                     </m:HBox>
                 </snappedHeading>
 
                 <expandedContent>
-                    <m:Label text="Example of an ObjectPage with header facet"/>
+                    <m:Label text="{i18n>View1View.ExampleOfAnObjectPageWithHeaderFacet}"/>
                 </expandedContent>
 
                 <snappedTitleOnMobile>
-                    <m:Title text="Object Page Header with Links, Rating Indicator, and Object Status"/>
+                    <m:Title text="{i18n>View1View.ObjectPageHeaderWithLinksRatingIndicatorAndObjectStatus}"/>
                 </snappedTitleOnMobile>
 
                 <!-- <actions>
@@ -42,31 +42,72 @@
         </headerTitle>
 
         <headerContent>
-            <m:FlexBox wrap="Wrap" fitContainer="true">
-                <m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiMediumMarginEnd sapUiSmallMarginBottom" displaySize="L"/>
-
+            <m:FlexBox wrap="Wrap" fitContainer="true" alignContent="Start">
+                <m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiMediumMarginEnd sapUiSmallMarginBottom" displaySize="XL" displayShape="Square" fallbackIcon="sap-icon://person-placeholder"/>
+                <!-- 
                 <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                    <m:Title class="sapUiTinyMarginBottom">
+                    <forms:Form >
+                        <forms:layout>
+                            <forms:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                        </forms:layout>
+                        <forms:formContainers>
+                            <forms:FormContainer expandable="false" expanded="true" visible="true">
+                                <forms:formElements>
+                                    <forms:FormElement visible="true" label="{i18n>numIdentAlumHead}">
+                                        <forms:fields>
+                                            <m:Input value="{Estudiantes>/NumeroIdent}"/>
+                                        </forms:fields>
+                                    </forms:FormElement>
+                                    <forms:FormElement visible="true" label="{i18n>numIdentAlumHead}">
+                                        <m:Input value="{Estudiantes>/NumeroIdent}"/>
+                                    </forms:FormElement>
+                                </forms:formElements>
+                                <forms:title>
+                                </forms:title>
+                                <forms:toolbar>
+                                </forms:toolbar>
+                            </forms:FormContainer>
+                        </forms:formContainers>
+                    </forms:Form>
+                </m:VBox> -->
+                <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                    <!-- <m:Title class="sapUiTinyMarginBottom">
                         <m:Link text="Order Details" press="onOrderDetailsPress"/>
-                    </m:Title>
+                    </m:Title> -->
 
                     <m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-                        <m:Label text="Manufacturer:" class="sapUiTinyMarginEnd"/>
-                        <m:Text text=" Robotech"/>
+                        <!-- <m:Label text="Manufacturer:" class="sapUiTinyMarginEnd"/>
+                        <m:Text text=" Robotech"/> -->
+                        <m:Label text="{i18n>numIdentAlumHead}:" design="Bold" class="sapUiTinyMarginEnd"/>
+                        <m:Text text="{/Estudiantes/NumeroIdent}" class="sapUiSmallMarginBegin"/>
                     </m:HBox>
 
                     <m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-                        <m:Label text="Factory:" class="sapUiTinyMarginEnd"/>
-                        <m:Text text=" Florida, OL"/>
+                        <m:Label text="{i18n>nomAlumHeader}:" design="Bold" class="sapUiTinyMarginEnd"/>
+                        <m:Text text="Edson" class="sapUiSmallMarginBegin"/>
+                        <!-- <m:Label text="Factory:" class="sapUiTinyMarginEnd"/>
+                        <m:Text text=" Florida, OL"/> -->
                     </m:HBox>
 
-                    <m:HBox>
-                        <m:Label text="Supplier:" class="sapUiTinyMarginEnd"/>
-                        <m:Link text="Robotech (234242343)" press="onExternalApplicationLinkPress"/>
+                    <m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                        <!-- <m:Label text="Supplier:" class="sapUiTinyMarginEnd"/>
+                        <m:Link text="Robotech (234242343)" press="onExternalApplicationLinkPress"/> -->
+                        <m:Label text="{i18n>apellAlumHeader}:" design="Bold" class="sapUiTinyMarginEnd"/>
+                        <m:Text text="Bravo Zapata" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+                    <m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                        <m:Label text="{i18n>nacAlumHeader}:" design="Bold" class="sapUiTinyMarginEnd"/>
+                        <m:Text text="Mexicana" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+                    <m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+                        <m:Label text="{i18n>fecNacAlumheader}:" design="Bold" class="sapUiTinyMarginEnd"/>
+                        <m:Text text="01/03/1993" class="sapUiSmallMarginBegin"/>
                     </m:HBox>
                 </m:VBox>
 
-                <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+
+
+                <!-- <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                     <m:Title text="Contact Information" class="sapUiTinyMarginBottom" />
 
                     <m:HBox class="sapUiTinyMarginBottom">
@@ -143,46 +184,73 @@
                     <m:VBox alignItems="End">
                         <m:Text text="4.1 out of 5"/>
                     </m:VBox>
-                </m:VBox>
+                </m:VBox> -->
             </m:FlexBox>
         </headerContent>
 
         <sections>
-            <ObjectPageSection titleUppercase="false" id="goalsSection" title="2014 Goals Plan">
+            <ObjectPageSection titleUppercase="false" id="goalsSection" title="Mi Carrera">
                 <subSections>
                     <ObjectPageSubSection id="goalsSectionSS1" titleUppercase="false">
-                        <blocks>
-                            <!-- <goals:GoalsBlock id="goalsblock" class="sapUxAPObjectPageSubSectionAlignContent"/> -->
-                        </blocks>
-                    </ObjectPageSubSection>
-                </subSections>
-            </ObjectPageSection>
 
-            <ObjectPageSection titleUppercase="false" id="personalSection" title="Personal" importance="Medium">
-                <subSections>
-                    <ObjectPageSubSection id="personalSectionSS1" title="Connect" titleUppercase="false">
                         <blocks>
-                            <!-- <personal:BlockPhoneNumber id="phone" class="sapUxAPObjectPageSubSectionAlignContent"/>
-                            <personal:BlockSocial id="social" class="sapUxAPObjectPageSubSectionAlignContent"/>
-                            <personal:BlockAdresses id="adresses" class="sapUxAPObjectPageSubSectionAlignContent"/>
-                            <personal:BlockMailing id="mailing" columnLayout="1" class="sapUxAPObjectPageSubSectionAlignContent"/> -->
+                            <m:Table items="{/Semestre}">
+                                <m:headerToolbar>
+                                    <m:Toolbar>
+                                        <m:Title text="Mi Carrera:" />
+                                        <m:Select items="{/Carrera}" width="auto" autoAdjustWidth="true">
+                                            <core:Item key="{Carrera}" text="{Carrera}">
+                                            </core:Item>
+                                        </m:Select>
+                                    </m:Toolbar>
+                                </m:headerToolbar>
+                                <m:items>
+                                    <m:ColumnListItem type="Active" id="item0">
+                                        <m:cells>
+                                            <m:Text text="{SemestreInicio}" id="text0" textAlign="Center" />
+                                            <m:Text text="{posicionCarrera}" id="text1" textAlign="Center" />
+                                            <m:Text text="{rankingCarrera}" id="text2" textAlign="Center" />
+                                            <m:Text text="{PromedioPonderado}" id="text3" textAlign="Center" />
+                                            <m:Text text="{Estado}" id="text4" textAlign="Center" />
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                                <m:columns>
+                                    <m:Column id="column0">
+                                        <m:header>
+                                            <m:Label text="{i18n>semInc}" id="label0" textAlign="Center" />
+                                        </m:header>
+                                    </m:Column>
+                                    <m:Column id="column1">
+                                        <m:header>
+                                            <m:Label text="{i18n>posCarr}" id="label1" textAlign="Center" />
+                                        </m:header>
+                                    </m:Column>
+                                    <m:Column id="column2">
+                                        <m:header>
+                                            <m:Label text="{i18n>rankcarr}" id="label2" textAlign="Center" />
+                                        </m:header>
+                                    </m:Column>
+                                    <m:Column id="column3">
+                                        <m:header>
+                                            <m:Label text="{i18n>promPondCarr}" id="label3" textAlign="Center" />
+                                        </m:header>
+                                    </m:Column>
+                                    <m:Column id="column4">
+                                        <m:header>
+                                            <m:Label text="{i18n>estCarr}" id="label4" textAlign="Center" />
+                                        </m:header>
+                                    </m:Column>
+                                </m:columns>
+                            </m:Table>
                         </blocks>
-                    </ObjectPageSubSection>
-
-                    <ObjectPageSubSection id="personalSectionSS2" title="Payment information" titleUppercase="false">
-                        <blocks>
-                            <!-- <personal:PersonalBlockPart1 id="part1" columnLayout="1" class="sapUxAPObjectPageSubSectionAlignContent"/> -->
-                        </blocks>
-                        <moreBlocks>
-                            <!-- <personal:PersonalBlockPart2 id="part2" columnLayout="1" class="sapUxAPObjectPageSubSectionAlignContent"/> -->
-                        </moreBlocks>
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
 
             <ObjectPageSection titleUppercase="false" id="employmentSection" title="Noticias">
                 <subSections>
-                    <ObjectPageSubSection id="employmentSectionSS1" title="Postgrado" titleUppercase="false">
+                    <ObjectPageSubSection id="employmentSectionSS1" title="Postgrado" titleUppercase="false" class="sapUiSmallMarginTop">
                         <blocks>
                             <!-- <employment:BlockJobInfoPart1 id="jobinfopart1" class="sapUxAPObjectPageSubSectionAlignContent"/>
                             <employment:BlockJobInfoPart2 id="jobinfopart2" class="sapUxAPObjectPageSubSectionAlignContent"/>
@@ -205,55 +273,8 @@
                                         <m:Link text="Noticia de Pregrado" target="_blank" href="https://www.google.com"/>
                                     </m:content>
                                 </m:CustomListItem>
-                            </m:List>                        
+                            </m:List>
                             <!-- <employment:BlockEmpDetailPart1 id="empdetailpart1" columnLayout="1" class="sapUxAPObjectPageSubSectionAlignContent"/> -->
-                        </blocks>
-                    </ObjectPageSubSection>
-                </subSections>
-            </ObjectPageSection>
-
-            <ObjectPageSection titleUppercase="false" id="orderDetailsSection" title="Order Details">
-                <subSections>
-                    <ObjectPageSubSection title="Order Details" showTitle="false">
-                        <blocks>
-                            <forms:SimpleForm class="sapUxAPObjectPageSubSectionAlignContent" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
-                                <core:Title text="Order Details" />
-
-                                <m:Label text="Order ID" />
-                                <m:Text text="589946637" />
-
-                                <m:Label text="Cotract" />
-                                <m:Link text="10045876" />
-
-                                <m:Label text="Transaction Date:" />
-                                <m:Text text="May 6, 2018" />
-
-                                <m:Label text="Expected Delivery Date" />
-                                <m:Text text="June 23, 2018" />
-
-                                <m:Label text="Factory" />
-                                <m:Text text="Orlando, FL" />
-
-                                <m:Label text="Supplier" />
-                                <m:Text text="Robotech" />
-
-                                <core:Title text="Configuration Accounts" />
-
-                                <m:Label text="Model" />
-                                <m:Text text="Robot Arm Series 9" />
-
-                                <m:Label text="Color" />
-                                <m:Text text="White (default)" />
-
-                                <m:Label text="Socket" />
-                                <m:Text text="Default Socket 10" />
-
-                                <m:Label text="Leasing Instalment" />
-                                <m:Text text="379.99 USD per month" />
-
-                                <m:Label text="Axis" />
-                                <m:Text text="6 Axis" />
-                            </forms:SimpleForm>
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
